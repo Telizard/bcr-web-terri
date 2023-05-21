@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
+import style from "./searchresult.css";
 
 export const SearchResult = () => {
   const navigate = useNavigate();
@@ -64,17 +65,18 @@ export const SearchResult = () => {
         id="hero"
         style={{
           position: "relative",
+          height: "250px",
         }}
       >
         <div className="container">
           <a className="navbar-brand" href="/">
-            <span className="logo"></span>
+            <span className="logo2"></span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav navtext">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#features">
                   Our Services

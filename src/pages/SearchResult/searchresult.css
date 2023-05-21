@@ -1,0 +1,13 @@
+.navtext {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.kotak {
+  border: 1px solid white;
+  /* box-shadow: 0.75px 0.75px 0.75px 0.75px #808080; */
+  border-radius: 2px;
+  background-color: white;
+  margin-top: -70px;
+  z-index: 2;
+}

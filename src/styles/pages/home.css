@@ -1,5 +1,5 @@
 #hero {
-  background-color: var(--hero-bg);
+  background-color: #f1f3ff;
 }
 
 .navbar {
@@ -16,6 +16,13 @@
   background: var(--primary-dark-blue-04);
   height: 2.5rem;
   width: 7rem;
+}
+.logo2 {
+  display: block;
+  background: var(--primary-dark-blue-04);
+  height: 2.5rem;
+  width: 7rem;
+  margin-bottom: 120px;
 }
 
 .icon {
