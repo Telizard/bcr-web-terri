@@ -21,7 +21,7 @@ const Hero = (props) => {
           <a className="navbar-brand" href="/">
             <span className="logo"></span>
           </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="true" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
@@ -78,12 +78,5 @@ const Hero = (props) => {
     </section>
   );
 };
-
-// Hero.propTypes = {
-//   withRentButton: PropTypes.bool,
-//   withSearchForm: PropTypes.bool,
-//   withHeroContent: PropTypes.bool,
-//   withSearchResultForm: PropTypes.bool,
-// };
 
 export default Hero;

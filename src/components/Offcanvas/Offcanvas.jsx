@@ -18,14 +18,21 @@ function OffCanvasExample({ name, ...props }) {
 
   return (
     <>
-      <Button variant="white" onClick={toggleShow} className="me-2 d-flex justify-content-end ">
+      <Button variant="white" onClick={toggleShow} className="me-2 d-flex justify-content-end">
         {name}
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title></Offcanvas.Title>
+          <Offcanvas.Title> BCR </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body></Offcanvas.Body>
+        <Offcanvas.Body>
+          <ul>
+            <li>Our Services</li>
+            <li>Why Us</li>
+            <li>Testimoni</li>
+            <li>FAQ</li>
+          </ul>
+        </Offcanvas.Body>
       </Offcanvas>
     </>
   );
