@@ -1,6 +1,68 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
 const Detail = () => {
+  const [name, setName] = useState();
+  const [image, setImage] = useState();
+
+  const { id } = useParams();
+  let fetchStatus = async () => {
+    let result = await axios.get(`https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`);
+    console.log(result.data, "<<<<<");
+    setName(result.data.name);
+    setImage(result.data.image);
+  };
+  useEffect(() => {
+    fetchStatus();
+  }, []);
+
   return (
     <>
+      <div>
+        <nav
+          className="navbar navbar-expand-lg bg-body-tertiary mb-3 "
+          id="hero"
+          style={{
+            position: "relative",
+            height: "250px",
+          }}
+        >
+          <div className="container">
+            <a className="navbar-brand" href="/">
+              <span className="logo2"></span>
+            </a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+              <ul className="navbar-nav navtext">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#features">
+                    Our Services
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#features">
+                    Why Us
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#features">
+                    Testimonial
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#features">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
       <div className="container">
         <div className="row m-2 pt-3">
           <div className="col">
@@ -38,10 +100,10 @@ const Detail = () => {
           <div className="col mt-2">
             <div className="card w-75 d-flex ">
               <div className="card-body justify-content-end ">
-                <div className="mobil1 pt-2">
-                  <img src={require("../../components/aset/cardetail.png")} alt="" />
+                <div className=" pt-2 ">
+                  <img src={image} style={{ width: "300px", height: "200px" }} alt="" className="justify-content-center" />
                 </div>
-                <h6 className="text-start fw-bold pt-5">Innova</h6>
+                <h6 className="text-start fw-bold pt-5">{name}</h6>
                 <div className="user1">
                   {" "}
                   <img src="aset/users.png" alt="" />

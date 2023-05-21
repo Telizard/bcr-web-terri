@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <SearchResult />,
   },
   {
-    path: "/detail",
+    path: "/detail/:id",
     element: <Detail />,
   },
 ]);

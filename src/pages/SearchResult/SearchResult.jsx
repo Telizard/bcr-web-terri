@@ -156,7 +156,7 @@ export const SearchResult = () => {
                   </div>
                 </div>
                 <div className="col p-4">
-                  <button type="submit" className="btn text-white" style={{ background: "#5cb85f" }} id="tombol1">
+                  <button type="submit" className="btn btn-outline-primary" style={{ background: "" }} id="tombol1">
                     Cari Mobil
                   </button>
                 </div>
@@ -180,7 +180,7 @@ export const SearchResult = () => {
                                   recusandae. Dolore?
                                 </Card.Text>
                               </Card.Body>
-                              <Link to="/detail">
+                              <Link to={`/detail/${res.id}`}>
                                 <Button variant="success">Pilih Mobil</Button>
                               </Link>
                             </Card>
