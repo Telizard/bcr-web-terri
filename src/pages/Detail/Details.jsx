@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Card, Form, Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -62,6 +63,49 @@ const Detail = () => {
           </div>
         </nav>
       </div>
+      <Container>
+        <div className="container kotak d-flex justify-content-center">
+          <div className=" w-100 m-3 p-3">
+            <div className="container flex-wrap">
+              <div className="row">
+                <h6 className="fw-bold">Pencarianmu</h6>
+                <div className="col">
+                  <Form>
+                    <Form.Group className="mb-3" controlId="">
+                      <Form.Label>Nama Mobil</Form.Label>
+                      <Form.Control type="email" placeholder="nama mobil" />
+                    </Form.Group>
+                  </Form>
+                </div>
+                <div className="col">
+                  <Form>
+                    <Form.Group className="mb-3" controlId="">
+                      <Form.Label>Kategori</Form.Label>
+                      <Form.Control type="email" placeholder="kategori" />
+                    </Form.Group>
+                  </Form>
+                </div>
+                <div className="col">
+                  <Form>
+                    <Form.Group className="mb-3" controlId="">
+                      <Form.Label>Harga Sewa per Hari</Form.Label>
+                      <Form.Control type="email" placeholder="Harga Sewa per Hari" />
+                    </Form.Group>
+                  </Form>
+                </div>
+                <div className="col">
+                  <Form>
+                    <Form.Group className="mb-3" controlId="">
+                      <Form.Label>Status</Form.Label>
+                      <Form.Control type="email" placeholder="Status" />
+                    </Form.Group>
+                  </Form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
 
       <div className="container">
         <div className="row m-2 pt-3">

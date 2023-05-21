@@ -8,3 +8,13 @@
   --bs-btn-bg: ;
   --bs-btn-border-color: var(--primary-dark-blue-04);
 } */
+
+.kotak {
+  border: 1px solid white;
+  box-shadow: 0.75px 0.75px 0.75px 0.75px #808080;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: -70px;
+  z-index: index 1;
+  position: relative;
+}

@@ -157,7 +157,7 @@ export const SearchResult = () => {
                 </div>
                 <div className="col p-4">
                   <button type="submit" className="btn btn-outline-primary" style={{ background: "" }} id="tombol1">
-                    Cari Mobil
+                    Edit
                   </button>
                 </div>
 
